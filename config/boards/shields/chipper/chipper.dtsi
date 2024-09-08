@@ -9,7 +9,7 @@
 / {
 	chosen {
 		zmk,kscan = &kscan0;
-		zmk,matrix_transform = &keymap_transform_1;
+		zmk,matrix_transform = &five_column_transform;
 	};
 
 	default_transform: keymap_transform_0 {
@@ -62,25 +62,6 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
 };
 
 
-//&spi0 {
-//	compatible = "nordic,nrf-spim";
-//	status = "okay";
-//	sck-pin = <5>;
-//	mosi-pin = <4>;
-//	miso-pin = <8>;
-//	cs-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
-//
-//	sharp: ls0xx@0 {
-//		compatible = "sharp,ls0xx";
-//		label = "DISPLAY";
-//		spi-max-frequency = <2000000>;
-//		reg = <0>;
-//		width = <160>;
-//		height = <68>;
-//		// disp-en-gpios = <&gpio0 23 GPIO_ACTIVE_HIGH>;
-//	};
-//};
-
 &pinctrl {
 	spi0_default: spi0_default {
 		group1 {
@@ -121,7 +102,6 @@ display_spi: &spi0 {
 	};
 };
 
-
 / {
   chosen {
     zephyr,display = &sharp;
@@ -131,4 +111,3 @@ display_spi: &spi0 {
 &usbd {
 	status = "okay";
 };
-
