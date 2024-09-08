@@ -19,6 +19,7 @@ jobs:
           cp config/chippy.keymap config/boards/shields/chippy/chippy.keymap
 
       - name: Commit and Push Changes
+        continue-on-error: true 
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
