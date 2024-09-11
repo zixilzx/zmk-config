@@ -104,8 +104,8 @@ display_spi: &spi0 {
 
 / {
   chosen {
-//    zephyr,display = &sharp;
-    zephyr,display = &nice_view;
+    zephyr,display = &sharp;
+   // zephyr,display = &nice_view;
   };
 };
 

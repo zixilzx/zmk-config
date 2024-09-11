@@ -127,7 +127,7 @@ display_i2c: &i2c0 {
 
 / {
   chosen {
-    // zephyr,display = &oled;
-    zephyr,display = &nice_view;
+    zephyr,display = &oled;
+    // zephyr,display = &nice_view;
   };
 };
