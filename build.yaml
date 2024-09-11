@@ -1,8 +1,8 @@
 include:
   - board: seeeduino_xiao_ble
-    shield: chippy_left nice_view_adapter nice_view
+    shield: chippy_left
   - board: seeeduino_xiao_ble
-    shield: chippy_right nice_view_adapter nice_view
+    shield: chippy_right
   - board: seeeduino_xiao_ble
     shield: chipper_left nice_view_adapter nice_view
   - board: seeeduino_xiao_ble
