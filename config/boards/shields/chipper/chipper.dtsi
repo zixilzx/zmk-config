@@ -61,7 +61,6 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
 	// TODO: per-key RGB node(s)?
 };
 
-
 // &pinctrl {
 // 	spi0_default: spi0_default {
 // 		group1 {
@@ -79,7 +78,6 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
 // 		};
 // 	};	
 // };
-
 
 // display_spi: &spi0 {
 // 	compatible = "nordic,nrf-spim";
