@@ -1,11 +1,11 @@
 include:
   - board: seeeduino_xiao_ble
-    shield: chippy_left 
+    shield: chippy_left nice_view_adapter nice_view
   - board: seeeduino_xiao_ble
-    shield: chippy_right
+    shield: chippy_right nice_view_adapter nice_view
   - board: seeeduino_xiao_ble
-    shield: chipper_left nice_view
+    shield: chipper_left nice_view_adapter nice_view
   - board: seeeduino_xiao_ble
-    shield: chipper_right nice_view
+    shield: chipper_right nice_view_adapter nice_view
   - shield: settings_reset
     board: seeeduino_xiao_ble
