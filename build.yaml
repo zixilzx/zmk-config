@@ -5,7 +5,7 @@ include:
     shield: chippy_right
 
   - board: seeeduino_xiao_ble
-    shield: chipper_dongle_xiao
+    shield: chipper_dongle_xiao dongle_display
   - board: seeeduino_xiao_ble
     shield: chipper_left
   - board: seeeduino_xiao_ble
