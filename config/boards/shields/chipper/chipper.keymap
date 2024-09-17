@@ -21,7 +21,7 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <13 16 14 15 16 19 20>;
+            hold-trigger-key-positions = <13 16 16 10 11 12 13 17 18 19>;
         };
     };
 
@@ -113,7 +113,7 @@
                               &trans        &trans        &trans          &trans     &trans     &trans
             >;
 
-            label = "SYMBOLS";
+            label = "NUMBS";
         };
 
         lower_layer {
