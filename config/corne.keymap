@@ -83,8 +83,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        display-name = "BASE";
         default_layer {
+            display-name = "BASE";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
