@@ -3,7 +3,7 @@
 / {
 	chosen {
         zmk,kscan = &mock_kscan;
-    		zmk,matrix_transform = &five_column_transform;
+    	zmk,matrix_transform = &five_column_transform;
         zephyr,display = &oled;
 
 	};
