@@ -16,8 +16,6 @@ if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_PERIPHERAL_LEFT || SH
 config ZMK_SPLIT
     default y
 
-endif
-
 if ZMK_DISPLAY
 
 config I2C
