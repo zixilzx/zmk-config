@@ -6,3 +6,10 @@ config SHIELD_TOTEM_LEFT
 
 config SHIELD_TOTEM_RIGHT
     def_bool $(shields_list_contains,totem_right)
+
+config SHIELD_TOTEM_PERIPHERAL_LEFT
+    def_bool $(shields_list_contains,totem_peripheral_left)
+
+config SHIELD_TOTEM_DONGLE_XIAO
+    def_bool $(shields_list_contains,totem_dongle_xiao)
+

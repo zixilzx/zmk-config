@@ -1,7 +1,7 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_TOTEM_LEFT
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_DONGLE_NANO
 
 config ZMK_KEYBOARD_NAME
     default "TOTEM"
@@ -11,9 +11,27 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_PERIPHERAL_LEFT || SHIELD_TOTEM_DONGLE_NANO
 
 config ZMK_SPLIT
     default y
 
 endif
+
+if ZMK_DISPLAY
+
+config I2C
+    default y
+
+config SSD1306
+    default y
+
+if SHIELD_TOTEM_DONGLE_XIAO
+  
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+endif
+
+endif # ZMK_DISPLAY
