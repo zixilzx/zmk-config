@@ -6,6 +6,9 @@ manifest:
       url-base: https://github.com/urob
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: nice-view-gem 
+      remote: m165437 
+      revision: main 
 
   projects:
     - name: zmk
