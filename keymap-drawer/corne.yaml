@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   BASE:
   - {t: ▽, type: trans}
@@ -139,14 +139,14 @@ combos:
 - p: [1, 2]
   k: ESCAPE
 - p: [25, 26]
-  k: Gui+ Z
+  k: Gui+Z
 - p: [22, 21]
   k: ''''
 - p: [26, 27]
-  k: Gui+ X
+  k: Gui+X
 - p: [27, 28]
-  k: Gui+ C
+  k: Gui+C
 - p: [28, 29]
-  k: Gui+ V
+  k: Gui+V
 - p: [17, 18]
   k: ESCAPE

@@ -24,6 +24,5 @@ manifest:
       remote: m165437
       revision: main
 
-
   self:
     path: config
