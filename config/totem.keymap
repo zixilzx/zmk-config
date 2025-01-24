@@ -12,12 +12,14 @@
 
 #include "zmk-helpers/helper.h"
 
-#define HM_TAPPING_TERM 280
-#define HM_TAPPING_TERM_FAST 175
-#define HM_PRIOR_IDLE 150
+#define HM_TAPPING_TERM 180
+#define HM_TAPPING_TERM_FAST 150
+#define HM_PRIOR_IDLE 120
+
 #define COMBO_TERM_FAST 35
 #define COMBO_TERM_SLOW 40
-#define COMBO_PRIOR_IDLE 100
+#define COMBO_PRIOR_IDLE 80
+
 #define BASE 0
 #define NUMS 1
 #define DANGER 2
@@ -33,19 +35,160 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
 #define KEYS_T LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
 
-/ {
-    behaviors {
-        // Positional Homerow mods
-        // Homerow mods that prevent accidental activations when rolling keys,
-        // such as when typing `st` or `ne` on colemak-dh layouts or `as` on
-        // qwerty.
-        //
-        // Works by only allowing a mod to activate within tapping-term if
-        // it's on the opposite side of the keyboard or on the same side thumb
-        // keys.
-        // Further optimization using urob's timerless homerow mods method:
-        // https://github.com/urob/zmk-config#timeless-homerow-mods
+&lt {
+    tapping-term-ms = <175>;
+};
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        //INFO: Brackets and braces
+        combo_paren_l {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <2 3>;
+        };
+
+        combo_paren_r {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <6 7>;
+        };
+
+        combo_bracket_l {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <0 1>;
+        };
+
+        combo_bracket_r {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <8 9>;
+        };
+
+        combo_brace_l {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <1 2>;
+        };
+
+        combo_brace_r {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <7 8>;
+        };
+
+        //INFO: System commands
+        combo_caps_word {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&caps_word>;
+            key-positions = <15 16>;
+        };
+
+        combo_esc_l {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1 2>;
+        };
+
+        combo_esc_r {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp ESCAPE>;
+            key-positions = <27 28>;
+        };
+
+        combo_tab {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp TAB>;
+            key-positions = <28 28>;
+        };
+
+        combo_grave {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp GRAVE>;
+            key-positions = <29 30>;
+        };
+
+        //INFO: Edit commands
+        combo_undo {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp LG(Z)>;
+            key-positions = <21 22>;
+        };
+
+        combo_redo {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp LS(LG(Z))>;
+            key-positions = <23 24>;
+        };
+
+        combo_copy {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp LG(C)>;
+            key-positions = <22 23>;
+        };
+
+        combo_paste {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp LG(V)>;
+            key-positions = <23 24>;
+        };
+
+        //INFO: Special characters
+        combo_quote {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <19 18>;
+        };
+
+        combo_underscore {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <3 13>;
+        };
+
+        combo_minus {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp MINUS>;
+            key-positions = <6 16>;
+        };
+
+        combo_plus {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp PLUS>;
+            key-positions = <7 17>;
+        };
+
+        combo_equal {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+            bindings = <&kp EQUAL>;
+            key-positions = <8 18>;
+        };
+    };
+
+    behaviors {
         hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -53,7 +196,7 @@
 
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            quick-tap-ms = <HM_TAPPING_TERM_FAST>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
             hold-trigger-on-release;
@@ -66,84 +209,10 @@
 
             flavor = "balanced";
             tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <HM_TAPPING_TERM_FAST>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             hold-trigger-key-positions = <KEYS_L KEYS_T>;
             hold-trigger-on-release;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        escape {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp ESCAPE>;
-            key-positions = <27 28>;
-        };
-
-        tab {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp TAB>;
-            key-positions = <28 29>;
-        };
-
-        grave {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp GRAVE>;
-            key-positions = <29 30>;
-        };
-
-        escapeleft {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 0>;
-        };
-
-        undo {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp LG(Z)>;
-            key-positions = <21 22>;
-        };
-
-        quote {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <19 18>;
-        };
-
-        cut {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp LG(X)>;
-            key-positions = <22 23>;
-        };
-
-        copy {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp LG(C)>;
-            key-positions = <23 24>;
-        };
-
-        paste {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp LG(V)>;
-            key-positions = <24 25>;
-        };
-
-        escapecombo {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            bindings = <&kp ESCAPE>;
-            key-positions = <14 15>;
         };
     };
 
@@ -153,10 +222,10 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-       &kp Q                 &kp W             &kp E                 &kp R               &kp T        &kp Y      &kp U               &kp I                  &kp O    &kp P
-       &hm_l LEFT_CONTROL A  &hm_l LEFT_ALT S  &hm_l LEFT_COMMAND D  &hm_l LEFT_SHIFT F  &kp G        &kp H      &hm_r LEFT_SHIFT J  &hm_r RIGHT_COMMAND K  &kp L    &kp SEMI
-&kp Q  &kp Z                 &kp X             &kp C                 &kp V               &kp B        &kp N      &kp M               &kp COMMA              &kp DOT  &kp SLASH  &kp SLASH
-                                               &mo 2                 &mo 1               &kp ENTER    &kp SPACE  &kp BACKSPACE       &mo 2
+       &kp Q          &kp W         &kp E         &kp R          &kp T        &kp Y       &kp U          &kp I         &kp O        &kp P
+       &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_l LSHFT F  &kp G        &kp H       &hm_r RSHFT J  &hm_r RGUI K  &hm_r RALT L &hm_r RCTRL SEMI
+&kp Q  &kp Z          &kp X         &kp C         &kp V          &kp B        &kp N       &kp M          &kp COMMA     &kp DOT      &kp SLASH  &kp SLASH
+                                    &mo 2         &mo 1          &lt 3 ENTER  &lt 3 SPACE &lt 2  &mo 2
             >;
         };
 
