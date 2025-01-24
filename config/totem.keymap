@@ -112,7 +112,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&kp TAB>;
-            key-positions = <28 28>;
+            key-positions = <28 29>;
         };
 
         combo_grave {
@@ -134,7 +134,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&kp LS(LG(Z))>;
-            key-positions = <23 24>;
+            key-positions = <24 25>;
         };
 
         combo_copy {
@@ -222,10 +222,10 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-       &kp Q          &kp W         &kp E         &kp R          &kp T        &kp Y       &kp U          &kp I         &kp O        &kp P
-       &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_l LSHFT F  &kp G        &kp H       &hm_r RSHFT J  &hm_r RGUI K  &hm_r RALT L &hm_r RCTRL SEMI
-&kp Q  &kp Z          &kp X         &kp C         &kp V          &kp B        &kp N       &kp M          &kp COMMA     &kp DOT      &kp SLASH  &kp SLASH
-                                    &mo 2         &mo 1          &lt 3 ENTER  &lt 3 SPACE &lt 2  &mo 2
+       &kp Q          &kp W         &kp E         &kp R          &kp T        &kp Y       &kp U           &kp I         &kp O        &kp P
+       &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_l LSHFT F  &kp G        &kp H       &hm_r RSHFT J   &hm_r RGUI K  &hm_r RALT L &hm_r RCTRL SEMI
+&kp Q  &kp Z          &kp X         &kp C         &kp V          &kp B        &kp N       &kp M           &kp COMMA     &kp DOT      &kp SLASH  &kp SLASH
+                                    &mo 2         &mo 1          &lt 3 ENTER  &lt 3 SPACE &lt 2 BACKSPACE &mo 2
             >;
         };
 
