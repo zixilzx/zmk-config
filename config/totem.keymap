@@ -15,11 +15,9 @@
 #define HM_TAPPING_TERM 180
 #define HM_TAPPING_TERM_FAST 150
 #define HM_PRIOR_IDLE 120
-
 #define COMBO_TERM_FAST 35
 #define COMBO_TERM_SLOW 40
 #define COMBO_PRIOR_IDLE 80
-
 #define BASE 0
 #define NUMS 1
 #define DANGER 2
@@ -35,15 +33,14 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
 #define KEYS_T LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
 
-&lt {
-    tapping-term-ms = <175>;
-};
+&lt { tapping-term-ms = <175>; };
 
 / {
     combos {
         compatible = "zmk,combos";
 
         //INFO: Brackets and braces
+
         combo_paren_l {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -87,6 +84,7 @@
         };
 
         //INFO: System commands
+
         combo_caps_word {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -123,6 +121,7 @@
         };
 
         //INFO: Edit commands
+
         combo_undo {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -152,6 +151,7 @@
         };
 
         //INFO: Special characters
+
         combo_quote {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
@@ -185,6 +185,12 @@
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             bindings = <&kp EQUAL>;
             key-positions = <8 18>;
+        };
+
+        bt_clr {
+            bindings = <&bt BT_CLR>;
+            key-positions = <20 31>;
+            layers = <2>;
         };
     };
 
@@ -222,10 +228,10 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-       &kp Q          &kp W         &kp E         &kp R          &kp T        &kp Y       &kp U           &kp I         &kp O        &kp P
-       &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_l LSHFT F  &kp G        &kp H       &hm_r RSHFT J   &hm_r RGUI K  &hm_r RALT L &hm_r RCTRL SEMI
-&kp Q  &kp Z          &kp X         &kp C         &kp V          &kp B        &kp N       &kp M           &kp COMMA     &kp DOT      &kp SLASH  &kp SLASH
-                                    &mo 2         &mo 1          &lt 3 ENTER  &lt 3 SPACE &lt 2 BACKSPACE &mo 2
+       &kp Q          &kp W         &kp E         &kp R          &kp T          &kp Y        &kp U            &kp I         &kp O         &kp P
+       &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_l LSHFT F  &kp G          &kp H        &hm_r RSHFT J    &hm_r RGUI K  &hm_r RALT L  &hm_r RCTRL SEMI
+&kp Q  &kp Z          &kp X         &kp C         &kp V          &kp B          &kp N        &kp M            &kp COMMA     &kp DOT       &kp SLASH         &kp SLASH
+                                    &mo 2         &mo 1          &lt 3 ENTER    &lt 3 SPACE  &lt 2 BACKSPACE  &mo 2
             >;
         };
 
@@ -242,9 +248,9 @@
         lower_layer {
             display-name = "DANGER";
             bindings = <
-              &kp F1        &kp F2        &kp F3          &kp F4        &kp F5              &kp F6    &kp F7             &kp F8           &kp F9     &bt BT_CLR
+              &kp F1        &kp F2        &kp F3          &kp F4        &kp F5              &kp F6    &kp F7             &kp F8           &kp F9     &kp F10
               &trans        &kp C_MUTE    &kp C_PREVIOUS  &kp C_NEXT    &kp C_PLAY_PAUSE    &kp LEFT  &kp DOWN           &kp UP           &kp RIGHT  &trans
-&bt BT_SEL 0  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4        &trans    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans     &trans      &trans
+&bt BT_SEL 0  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4        &trans    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans     &trans   &trans
                                           &trans          &trans        &trans              &trans    &trans             &trans
             >;
         };
