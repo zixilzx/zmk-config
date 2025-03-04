@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - Ctl+BACKSPACE
+  - BACKSPACE
   - LEFT GUI
   - {t: A, h: LEFT CONTROL}
   - {t: S, h: LEFT ALT}
