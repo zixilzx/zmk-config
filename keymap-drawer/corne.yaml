@@ -41,9 +41,52 @@ layers:
   - NUMS
   - SPACE
   - ENTER
-  - DANGER
+  - l2
   - RIGHT ALT
   NUMS:
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '~'
+  - UP
+  - '|'
+  - ''''
+  - '='
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - RIGHT
+  - '`'
+  - _
+  - +
+  - '-'
+  - /
+  - \
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DANGER
+  - {t: ▽, type: trans}
+  l2:
   - {t: ▽, type: trans}
   - '!'
   - '@'
@@ -57,37 +100,37 @@ layers:
   - )
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '-'
-  - '='
-  - '`'
+  - INS
+  - ''
+  - '{'
+  - (
+  - '"'
+  - ':'
+  - )
+  - '}'
+  - HOME
+  - PAGE UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DEL
+  - ''
+  - <
   - '['
+  - ''''
+  - ;
   - ']'
+  - '>'
+  - END
+  - PAGE DOWN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - _
-  - +
-  - '~'
-  - '|'
-  - \
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   DANGER:
-  - BT CLR
+  - '&bootloader'
   - F1
   - F2
   - F3
@@ -97,34 +140,34 @@ layers:
   - F7
   - F8
   - F9
+  - F10
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F11
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - MUTE
-  - PREVIOUS
-  - NEXT
-  - PLAY PAUSE
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - {t: ▽, type: trans}
-  - VOLUME DOWN
-  - VOLUME UP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
