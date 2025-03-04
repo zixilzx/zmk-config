@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
   BASE:
-  - {t: ▽, type: trans}
+  - TAB
   - Q
   - W
   - E
@@ -12,8 +12,8 @@ layers:
   - I
   - O
   - P
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Ctl+BACKSPACE
+  - LEFT CONTROL
   - {t: A, h: LEFT CONTROL}
   - {t: S, h: LEFT ALT}
   - {t: D, h: LEFT COMMAND}
@@ -24,8 +24,8 @@ layers:
   - {t: K, h: RIGHT COMMAND}
   - L
   - ;
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ENTER
+  - LEFT SHIFT
   - Z
   - X
   - C
@@ -36,7 +36,7 @@ layers:
   - ','
   - .
   - /
-  - {t: ▽, type: trans}
+  - RIGHT COMMAND
   - DANGER
   - NUMS
   - ENTER
