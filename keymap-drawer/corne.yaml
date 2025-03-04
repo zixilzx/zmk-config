@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - Ctl+BACKSPACE
-  - LEFT CONTROL
+  - LEFT GUI
   - {t: A, h: LEFT CONTROL}
   - {t: S, h: LEFT ALT}
   - {t: D, h: LEFT COMMAND}
@@ -23,9 +23,9 @@ layers:
   - {t: J, h: LEFT SHIFT}
   - {t: K, h: RIGHT COMMAND}
   - L
-  - ;
-  - ENTER
-  - LEFT SHIFT
+  - '?'
+  - RSHFT
+  - LCTRL
   - Z
   - X
   - C
@@ -36,13 +36,13 @@ layers:
   - ','
   - .
   - /
-  - RIGHT COMMAND
-  - DANGER
+  - ESC
+  - LSHFT
   - NUMS
-  - ENTER
   - SPACE
-  - BACKSPACE
+  - ENTER
   - DANGER
+  - RIGHT ALT
   NUMS:
   - {t: ▽, type: trans}
   - '!'
@@ -123,11 +123,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
 - p: [31, 32]
