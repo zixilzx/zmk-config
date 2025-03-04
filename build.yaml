@@ -1,35 +1,8 @@
 include:
-  - board: seeeduino_xiao_ble
-    shield: chippy_left rgbled_adapter nice_view_adapter nice_view_gem
-  - board: seeeduino_xiao_ble
-    shield: chippy_right rgbled_adapter nice_view_adapter nice_view_gem
-
-  - board: nice_nano_v2
-    shield: chipper_dongle_nano dongle_display 
-  - board: seeeduino_xiao_ble
-    shield: chipper_dongle_xiao dongle_display
-  - board: seeeduino_xiao_ble
-    shield: chipper_left rgbled_adapter nice_view_adapter nice_view_gem
-  - board: seeeduino_xiao_ble
-    shield: chipper_peripheral_left rgbled_adapter
-  - board: seeeduino_xiao_ble
-    shield: chipper_right rgbled_adapter nice_view_adapter nice_view_gem
-
-  - board: nice_nano_v2
-    shield: totem_dongle_nano dongle_display
-  - board: seeeduino_xiao_ble
-    shield: totem_peripheral_left rgbled_adapter
-  - board: seeeduino_xiao_ble
-    shield: totem_left rgbled_adapter
-  - board: seeeduino_xiao_ble
-    shield: totem_right rgbled_adapter
-
   - board: nice_nano_v2 
     shield: corne_left nice_view_adapter nice_view_gem
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view_gem
 
-  - shield: settings_reset
-    board: seeeduino_xiao_ble
   - board: nice_nano_v2
     shield: settings_reset
