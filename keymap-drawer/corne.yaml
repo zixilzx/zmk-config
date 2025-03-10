@@ -1,48 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
-  BASE:
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - BACKSPACE
-  - LEFT GUI
-  - {t: A, h: LEFT CONTROL}
-  - {t: S, h: LEFT ALT}
-  - {t: D, h: LEFT COMMAND}
-  - {t: F, h: LEFT SHIFT}
-  - G
-  - H
-  - {t: J, h: LEFT SHIFT}
-  - {t: K, h: RIGHT COMMAND}
-  - L
-  - '?'
-  - RSHFT
-  - LCTRL
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - ESC
-  - LSHFT
-  - NUMS
-  - SPACE
-  - ENTER
-  - l2
-  - RIGHT ALT
+  BASE: [TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, LEFT GUI, A, S, D, F, G, H, J, K, L, '?', RSHFT, LCTRL, Z, X, C, V, B, N, M, ',', ., /, ESC, LSHFT, NUMS, SPACE,
+    ENTER, l2, RIGHT ALT]
   NUMS:
   - {t: ▽, type: trans}
   - '1'
@@ -142,7 +101,7 @@ layers:
   - F9
   - F10
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BT CLR ALL
   - ''
   - ''
   - ''
@@ -172,24 +131,3 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-combos:
-- p: [31, 32]
-  k: ESCAPE
-- p: [32, 33]
-  k: TAB
-- p: [33, 34]
-  k: '`'
-- p: [1, 2]
-  k: ESCAPE
-- p: [25, 26]
-  k: Gui+Z
-- p: [22, 21]
-  k: ''''
-- p: [26, 27]
-  k: Gui+X
-- p: [27, 28]
-  k: Gui+C
-- p: [28, 29]
-  k: Gui+V
-- p: [17, 18]
-  k: ESCAPE
